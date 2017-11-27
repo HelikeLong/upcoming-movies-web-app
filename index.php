@@ -1,11 +1,13 @@
 <?php
-    $uri = explode('/', strtok($_SERVER["REQUEST_URI"],'?'));
-    array_shift($uri);
+    require_once('application/config/config.php');
+    require_once('application/config/constants.php');
 
-    $controller = (count($uri) ? $uri[0] : 'home');
+    $uri = (isset($_GET['uri']) ? explode('/', $_GET['uri']) : []);
+
+    $controller = ((count($uri) && !empty($uri[0])) ? $uri[0] : 'home');
     array_shift($uri);
-    $action = (count($uri) ? $uri[0] : 'index');
+    $action = ((count($uri) && !empty($uri[0])) ? $uri[0] : 'index');
     array_shift($uri);
     $params = $uri;
 
-    require_once('view/base.php');
+    require_once('application/views/base.php');

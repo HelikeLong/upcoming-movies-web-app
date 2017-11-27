@@ -5,6 +5,11 @@
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php/$1 [L]
+    RewriteCond %{QUERY_STRING} term=(.*)
+    RewriteRule ^.*$ index.php?uri=$0&term=%1
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ index.php?uri=$0
 
 </IfModule>
