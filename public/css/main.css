@@ -26,6 +26,9 @@ img {
 .jumbotron-heading {
     font-weight: 300;
 }
+.navbar-collapse .form-inline {
+    margin: 10px 0;
+}
 
 /* Movie list */
 .movie-card {

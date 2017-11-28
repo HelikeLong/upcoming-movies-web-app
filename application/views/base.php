@@ -22,19 +22,32 @@
     <link rel="stylesheet" href="<?=BASE_URL?>public/css/main.css" />
 </head>
 <body>
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-        <div class="container d-flex justify-content-between">
+    <header>
+        <div class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
             <a class="navbar-brand" href="<?=BASE_URL?>">Movies Web App</a>
-
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto"></ul>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                </ul>
                 <form class="form-inline my-2 my-lg-0" action="<?=BASE_URL?>search" method="get">
                     <input class="form-control mr-sm-2" type="text" name="term" placeholder="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </div>
-    </nav>
-    <?php require_once('content.php'); ?>
+    </header>
+    <main>
+        <?php require_once('content.php'); ?>
+    </main>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Pedro Henrique de Aquino Silva - Helike Long</p>
+        </div>
+    </footer>
 </body>
 </html>
