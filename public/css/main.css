@@ -1,0 +1,121 @@
+/* Main CSS file */
+/* General Style */
+img {
+    max-width: 100%;
+}
+.go-back {
+    text-decoration: none;
+    color: #555;
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    top: 54px;
+    padding: 37px 30px 55px 25px;
+    line-height: 0px;
+}
+.go-back:hover {
+    color: #555;
+    background-color: #E5E5E5;
+}
+.jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    background-color: #F5F5F5;
+    margin-bottom: 20px;
+}
+.jumbotron-heading {
+    font-weight: 300;
+}
+.navbar-collapse .form-inline {
+    margin: 10px 0;
+}
+
+/* Movie list */
+.movie-card {
+
+}
+.movie-card .thumbnail {
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.movie-card .thumbnail img {
+    width: 100%;
+}
+.movie-card h4 {
+    font-size: 1.1em;
+    margin: 1em 0;
+    margin-bottom: 0;
+    height: 40px;
+}
+.movie-card p.genre {
+    font-size: 0.8em;
+    height: 40px;
+    margin-bottom: 0;
+}
+.movie-card p.releasedate {
+    font-size: 0.9em;
+}
+
+/* Pagination */
+.pagination{width:100%;margin:20px 0 0 0;}
+.pagination-centered ul{margin:0 auto;display:table;}
+.pagination ul li{float:left;list-style:none;margin-bottom:15px;}
+.pagination ul li a, .pagination ul li span{padding:5px 8px;margin:3px;border:1px solid #DDD;text-decoration:none;border-radius:3px;cursor:pointer;color:#444;font-weight:400;display: inline}
+.pagination ul li a:hover{background-color:#FAFAFA;border:1px solid #BBB;color:#2A60C2;}
+.pagination ul li.active span, .pagination ul li.active span:hover{background-color:#DDD;border:1px solid #DDD;cursor:default;color:#444;}
+.pagination ul li.disabled span, .pagination ul li.disabled span:hover{background-color:#FAFAFA;border:1px solid #FAFAFA;color:#BBB;cursor:default;}
+
+/* Movie Description */
+.poster {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+@media screen and (max-width: 996px) {
+    .poster {
+        margin-bottom: 20px;
+    }
+}
+.poster-pic {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.movie-title, .highlight {
+    text-transform: UPPERCASE;
+    font-weight: bold;
+}
+.checked, .highlight span {
+    color: #ff9f1a;
+}
+.movie-title, .movie-description, .highlight, .rating {
+    margin-bottom: 15px;
+}
+.movie-title {
+    margin-top: 0;
+}
+.rating .highlight {
+    margin:0;
+}
+.rating .highlight span {
+    font-size: 24px;
+}
