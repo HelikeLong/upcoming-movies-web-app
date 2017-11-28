@@ -5,8 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Upcoming Movies Web App</title>
+    <title>Movies Web App</title>
     <link rel="shortcut icon" type="image/png" href="<?=BASE_URL?>public/images/favicon.png"/>
+
+    <!-- JQUERY -->
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+            crossorigin="anonymous"></script>
 
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -18,9 +24,9 @@
 <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
         <div class="container d-flex justify-content-between">
-            <a class="navbar-brand" href="<?=BASE_URL?>">Upcoming Movies Web App</a>
+            <a class="navbar-brand" href="<?=BASE_URL?>">Movies Web App</a>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto"></ul>
                 <form class="form-inline my-2 my-lg-0" action="<?=BASE_URL?>search" method="get">
                     <input class="form-control mr-sm-2" type="text" name="term" placeholder="Search">

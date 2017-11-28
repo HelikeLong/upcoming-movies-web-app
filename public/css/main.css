@@ -1,4 +1,5 @@
 /* Main CSS file */
+/* General Style */
 img {
     max-width: 100%;
 }
@@ -16,7 +17,6 @@ img {
     color: #555;
     background-color: #E5E5E5;
 }
-
 .jumbotron {
     padding-top: 6rem;
     padding-bottom: 3rem;
@@ -27,16 +27,44 @@ img {
     font-weight: 300;
 }
 
-.thumbnail {
+/* Movie list */
+.movie-card {
+
+}
+.movie-card .thumbnail {
     position: relative;
     padding: 0;
     margin-bottom: 20px;
 }
-.thumbnail img {
+.movie-card .thumbnail img {
     width: 100%;
 }
+.movie-card h4 {
+    font-size: 1.1em;
+    margin: 1em 0;
+    margin-bottom: 0;
+    height: 40px;
+}
+.movie-card p.genre {
+    font-size: 0.8em;
+    height: 40px;
+    margin-bottom: 0;
+}
+.movie-card p.releasedate {
+    font-size: 0.9em;
+}
 
-.preview {
+/* Pagination */
+.pagination{width:100%;margin:20px 0 0 0;}
+.pagination-centered ul{margin:0 auto;display:table;}
+.pagination ul li{float:left;list-style:none;margin-bottom:15px;}
+.pagination ul li a, .pagination ul li span{padding:5px 8px;margin:3px;border:1px solid #DDD;text-decoration:none;border-radius:3px;cursor:pointer;color:#444;font-weight:400;display: inline}
+.pagination ul li a:hover{background-color:#FAFAFA;border:1px solid #BBB;color:#2A60C2;}
+.pagination ul li.active span, .pagination ul li.active span:hover{background-color:#DDD;border:1px solid #DDD;cursor:default;color:#444;}
+.pagination ul li.disabled span, .pagination ul li.disabled span:hover{background-color:#FAFAFA;border:1px solid #FAFAFA;color:#BBB;cursor:default;}
+
+/* Movie Description */
+.poster {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -48,11 +76,11 @@ img {
     flex-direction: column;
 }
 @media screen and (max-width: 996px) {
-    .preview {
+    .poster {
         margin-bottom: 20px;
     }
 }
-.preview-pic {
+.poster-pic {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -69,19 +97,22 @@ img {
     -ms-flex-direction: column;
     flex-direction: column;
 }
-.product-title, .release-date {
+.movie-title, .highlight {
     text-transform: UPPERCASE;
     font-weight: bold;
 }
-.checked, .release-date span {
+.checked, .highlight span {
     color: #ff9f1a;
 }
-.product-title, .rating, .product-description, .release-date, .vote {
+.movie-title, .movie-description, .highlight, .rating {
     margin-bottom: 15px;
 }
-.product-title {
+.movie-title {
     margin-top: 0;
 }
-.tooltip-inner {
-    padding: 1.3em;
+.rating .highlight {
+    margin:0;
+}
+.rating .highlight span {
+    font-size: 24px;
 }

@@ -7,6 +7,8 @@
      * @param $params
      */
     function load($controller, $action, $params) {
+        require_once('application/controllers/ErrorHandleController.php');
+        $errorHandleController = new ErrorHandleController();
         try {
             $file = 'application/controllers/' . ucfirst($controller) . 'Controller.php';
             if (!file_exists ($file)) {
@@ -31,8 +33,6 @@
             }
         }
         catch (Exception $e) {
-            require_once('application/controllers/ErrorHandleController.php');
-            $errorHandleController = new ErrorHandleController();
             $errorHandleController->error404($e->getMessage());
         }
     }
